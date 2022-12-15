@@ -12,9 +12,24 @@
         @content;
     }
 }
-  
-@mixin desktop {
+
+@mixin  desktop {
     @media (min-width: v.$desktop) {
+        @content;
+    }
+}
+@mixin  desktopXL {
+    @media (min-width: v.$desktopXL) {
+        @content;
+    }
+}
+@mixin  desktopXXL {
+    @media (min-width: v.$desktopXXL) {
+        @content;
+    }
+}
+@mixin  desktopXXXL {
+    @media (min-width: v.$desktopXXXL) {
         @content;
     }
 }
@@ -46,4 +61,26 @@
     display: grid;
     gap: $espaciado;
     grid-template-columns: repeat($columnas, 1fr);
+}
+
+@mixin headingCursiva {
+    text-align: center;
+    color: v.$secundario;
+    font-family: v.$fuenteCursiva;
+    line-height: .8;
+    font-weight: 400;
+    text-transform: lowercase;
+    font-size: 4rem;
+    span {
+        color: v.$negro;
+        display: block;
+        text-transform: uppercase;
+        font-family: v.$fuentePrincipal;
+    }
+}
+@mixin heading {
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: 400;
+    font-size: 4rem;
 }

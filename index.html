@@ -10,6 +10,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Italianno&family=Lato:wght@400;700;900&display=swap"
         rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
     <link rel="stylesheet" href="build/css/app.css">
 </head>
 
@@ -52,13 +53,27 @@
             </nav>
         </div>
     </div>
-    <section class="slider">
-        <ul class="slider__contenedor">
-            <li class="slider__slide">
+    <section class="swiper contenedor">
+        <ul class="swiper-wrapper">
+            <li class="swiper-slide">
+                <picture>
+                    <source srcset="build/img/slide_01.avif" type="image/avif">
+                    <source srcset="build/img/slide_01.webp" type="image/webp">
+                    <img class="slider__imagen" loading="lazy" src="build/img/slide_01.jpg" alt="imagen slide">
+                </picture>
+            </li>
+            <li class="swiper-slide">
+                <picture>
+                    <source srcset="build/img/slide_02.avif" type="image/avif">
+                    <source srcset="build/img/slide_02.webp" type="image/webp">
+                    <img class="slider__imagen" loading="lazy" src="build/img/slide_02.jpg" alt="imagen slide">
+                </picture>
+            </li>
+            <li class="swiper-slide">
                 <picture>
                     <source srcset="build/img/slide_03.avif" type="image/avif">
                     <source srcset="build/img/slide_03.webp" type="image/webp">
-                    <img loading="lazy" src="build/img/slide_03.jpg" alt="imagen slide">
+                    <img class="slider__imagen" loading="lazy" src="build/img/slide_03.jpg" alt="imagen slide">
                 </picture>
             </li>
         </ul>
@@ -272,6 +287,9 @@
         </div>
         <p class="footer__copyright">Pagina hecha por Josué Palma - 2022 (Curso de Juan Pablo De la torre)</p>
     </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script src="js/app.js"></script>
 </body>
 
 </html>
